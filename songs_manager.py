@@ -1,5 +1,4 @@
 from tinytag import TinyTag
-import os
 import shutil
 
 
@@ -34,7 +33,20 @@ def sort_logic():
     else:
         shutil.move(f'{song_path}', r'C:\Users\novas\PycharmProjects\music_tags_alloc\the songs data\point B\others')
         print("the song is moved to the other's folder ")
-print('')
+
+
+# the sorting  of artists according to the music tags of the file
+def sort_artists():
+    if song_file.artist =='Lil Wayne':
+        shutil.move(f'{song_path}',r' THE REQUIRED DIR')
+    elif song_file.artist == 'Drake':
+        shutil.move(f'{song_path}',r' THE REQUIRED DIRECTORY')
+    else:
+        shutil.move(f'{song_path}',r'The directory with the other folder ')
+
+#LOOP TO GET THE PATH OF THE MUSIC FILE FROM THE USER.
+
+
 song_path = input('enter the command')
 if song_path =='enter':
     for path in song_path:
@@ -42,5 +54,6 @@ if song_path =='enter':
         song_file = TinyTag.get(song_path)
         song_details()
         sort_logic()
-
+        sort_artists()
+# the above created functions being called.
 
