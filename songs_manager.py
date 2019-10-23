@@ -45,17 +45,22 @@ def sort_logic_genre():
 def sort_artists():
     if song_file.artist == 'Lil Wayne':
         shutil.move(f'{song_path}', r' THE REQUIRED DIR')
+        print('the song is moved to lil waynne folder ')
     elif song_file.artist == 'Drake':
         shutil.move(f'{song_path}', r' THE REQUIRED DIRECTORY')
+        print('the song is moved to the Drake folder')
     else:
         shutil.move(f'{song_path}', r'The directory with the other folder ')
+        print('the song is moved to the other artists folder')
 
 
 def sort_artist_year():
     if song_file.year == '2019':
         shutil.move(f'{song_path}', r'the directory for year folder ')
+        print('the song is moved to 2019 folder')
     else:
         shutil.move(f'{song_path}', r'the directory to other folders')
+        print('the song is moved to the unspecified year folder')
 
 
 # LOOP TO GET THE PATH OF THE MUSIC FILE FROM THE USER.
